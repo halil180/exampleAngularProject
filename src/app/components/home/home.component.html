@@ -1,2 +1,13 @@
 <p>home works!</p>
 <app-content-list></app-content-list>
+
+
+<div [ngStyle]="{'font-weight':800}"> ngstyle</div>
+
+<ul>
+    <li *ngFor="let user of users;let i = index">
+        {{i}}
+       <strong *ngIf="user.age === 27" appHighlight> {{user.name}} :{{user.age}}</strong>
+       <span *ngIf="user.age != 27"> {{user.name}} :{{user.age}}</span>
+    </li>
+</ul>
